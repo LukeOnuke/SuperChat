@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Polygon?>
+<?import javafx.scene.text.TextFlow?>
+
+<VBox prefHeight="500.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/8.0.251" xmlns:fx="http://javafx.com/fxml/1" fx:controller="superchat.MainWindowController">
+  <children>
+    <MenuBar VBox.vgrow="ALWAYS">
+      <menus>
+        <Menu mnemonicParsing="false" text="Session">
+          <items>
+            <MenuItem mnemonicParsing="false" onAction="#settings" text="Settings" />
+                  <MenuItem mnemonicParsing="false" onAction="#saveChat" text="Save Chat" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" onAction="#quit" text="Quit" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Info">
+          <items>
+            <MenuItem mnemonicParsing="false" onAction="#about" text="About" />
+                  <MenuItem mnemonicParsing="false" onAction="#reportIssues" text="Report Issues" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" onAction="#help" text="Help" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+    <AnchorPane fx:id="ap_" maxHeight="-1.0" maxWidth="-1.0" prefHeight="414.0" prefWidth="640.0" VBox.vgrow="NEVER">
+         <children>
+            <Polygon fill="#a9ff1f79" layoutX="50.0" layoutY="253.0" points="-50.0, 186.0, 113.0, 149.0, -50.0, -51.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" AnchorPane.bottomAnchor="32.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="202.0" />
+            <Polygon layoutX="50.0" layoutY="60.0" points="-50.0, 156.0, 590.0, -60.0, -50.0, -60.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0">
+               <fill>
+                  <LinearGradient endX="0.08653846153846156" endY="0.0913461538461538" startX="0.1298076923076922" startY="1.0">
+                     <stops>
+                        <Stop color="#95f295" />
+                        <Stop color="#297fd0" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Polygon>
+            <Polygon layoutX="50.0" layoutY="331.0" points="-50.0, 140.0, 670.0, 140.0, 670.0, -245.0" stroke="TRANSPARENT" strokeType="INSIDE">
+               <fill>
+                  <LinearGradient endX="0.2644230769230769" endY="1.0" startX="0.2403846153846153">
+                     <stops>
+                        <Stop color="#95f295" />
+                        <Stop color="#297fd0" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Polygon>
+            <Label fx:id="label_" layoutX="19.0" layoutY="433.0" prefHeight="19.0" prefWidth="125.0" text="Type messages here" />
+            <TextField id="sendbox" fx:id="sendBox_" layoutX="14.0" layoutY="428.0" onAction="#sendBoxSendMsgMessage" onKeyReleased="#sendBoxSendMsgMessage" prefHeight="29.0" prefWidth="600.0" style="-fx-opacity: 0.7;" styleClass="sendbox" />
+            <Button id="button" fx:id="button_" defaultButton="true" layoutX="621.0" layoutY="428.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="29.0" prefWidth="80.0" text="Send" />
+            <ScrollPane layoutX="15.0" layoutY="15.0" prefHeight="405.0" prefWidth="685.0" style="-fx-opacity: 0.85;">
+               <content>
+                  <TextFlow fx:id="chatBox_" maxHeight="405.0" prefHeight="405.0" prefWidth="666.0" style="-fx-background-color: #e3e3e3; -fx-opacity: 0.7; -fx-font-size: 20px;" />
+               </content>
+            </ScrollPane>
+         </children>
+    </AnchorPane>
+  </children>
+</VBox>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="362.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.251" xmlns:fx="http://javafx.com/fxml/1" fx:controller="superchat.gui.about.AboutController">
+  <children>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="469.0" prefWidth="640.0" VBox.vgrow="ALWAYS">
+         <children>
+            <Pane prefHeight="362.0" prefWidth="88.0" style="-fx-background-color: linear-gradient(to bottom, #49ED30, #00969E); -fx-effect: dropshadow( gaussian , #b8b8b8 , 20 , 0.5 , 5 , 0 );" />
+            <Label layoutX="105.0" layoutY="14.0" text="About" textFill="#868686">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="105.0" layoutY="57.0" text="Made by : LukeOnuke and Pequla" />
+            <Label layoutX="105.0" layoutY="86.0" text="Licence : Specified on the GitHub Repository" />
+            <Label layoutX="105.0" layoutY="150.0" text="Software used : Netbeans, Gimp, GluonScene" />
+            <Label layoutX="105.0" layoutY="117.0" text="Software : SuperChat (Chat application) (GUI Shell for SimpleChat)" />
+            <Label layoutX="105.0" layoutY="182.0" text="Usefull Links" textFill="#868686">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <TextArea editable="false" layoutX="105.0" layoutY="217.0" prefHeight="137.0" prefWidth="512.0" text="GitHub Repo :&#10;LukeOnuke : https://github.com/LukeOnuke&#10;Pequla : https://github.com/Pequla&#10;SimpleChat :  https://github.com/Pequla/SimpleChat&#10;GluonScene : https://gluonhq.com/&#10;Documentation :">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <tooltip>
+                  <Tooltip opacity="0.8" text="Links to the things mentioned" />
+               </tooltip>
+            </TextArea>
+         </children>
+    </AnchorPane>
+  </children>
+</VBox>
